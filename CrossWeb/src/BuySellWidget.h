@@ -9,15 +9,23 @@
 #define BUYSELLWIDGET_H_
 
 #include <Wt/WContainerWidget>
+#include <Wt/WApplication>
+#include <Wt/WBreak>
+#include <Wt/WContainerWidget>
+#include <Wt/WLineEdit>
+#include <Wt/WPushButton>
+#include <Wt/WText>
 
-namespace IOTPApp {
 
 class BuySellWidget: public Wt::WContainerWidget {
+	std::string scrip_name;
+	double ltp_;
+	Wt::WLineEdit *qty_;
+	
 public:
-	BuySellWidget();
+	BuySellWidget(WContainerWidget*, std::string, double);
 	virtual ~BuySellWidget();
 };
-
-} /* namespace IOTPApp */
+ /* namespace IOTPApp */
 
 #endif /* BUYSELLWIDGET_H_ */

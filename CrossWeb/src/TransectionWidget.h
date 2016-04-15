@@ -10,14 +10,20 @@
 
 #include <Wt/WContainerWidget>
 
-namespace IOTPApp {
+struct TransectionItem{
+	std::string scrip_name;
+	int quantity;
+	double price;
+	
+};
+
 
 class TransectionWidget: public Wt::WContainerWidget {
 public:
-	TransectionWidget();
+	TransectionWidget(WContainerWidget *, std::vector<TransectionItem>);
 	virtual ~TransectionWidget();
 };
 
-} /* namespace IOTPApp */
+/* namespace IOTPApp */
 
 #endif /* TRANSECTIONWIDGET_H_ */

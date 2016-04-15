@@ -9,15 +9,27 @@
 #define PORTFOLIOWIDGET_H_
 
 #include <Wt/WContainerWidget>
+#include <Wt/WApplication>
+#include <Wt/WBreak>
+#include <Wt/WContainerWidget>
+#include <Wt/WLineEdit>
+#include <Wt/WPushButton>
+#include <Wt/WText>
 
-namespace IOTPApp {
+struct PortFolioItem{
+	std::string scrip_name;
+	int quantity;
+	int day;
+	int month;
+	int year;
+};
 
 class PortFolioWidget: public Wt::WContainerWidget {
 public:
-	PortFolioWidget();
+	PortFolioWidget(WContainerWidget *, std::vector<PortFolioItem>);
 	virtual ~PortFolioWidget();
 };
 
-} /* namespace IOTPApp */
+/* namespace IOTPApp */
 
 #endif /* PORTFOLIOWIDGET_H_ */

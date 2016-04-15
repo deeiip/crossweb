@@ -11,7 +11,6 @@
 StockMarket::StockMarket(const Wt::WEnvironment& env) :
 		Wt::WApplication(env) {
 	// TODO Auto-generated constructor stub
-
 }
 
 StockMarket::~StockMarket() {
